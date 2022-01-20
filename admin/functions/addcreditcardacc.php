@@ -1,6 +1,6 @@
 <?php
-require_once('../includes/auth.php');
-include('../includes/connect.php');
+include_once '../includes/auth.php';
+include_once '../includes/connect.php';
 $Series = $_POST['Series'];
 $Names = $_POST['Names'];
 $Creditcardno = $_POST['Creditcardno'];

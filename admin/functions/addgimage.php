@@ -1,6 +1,6 @@
 <?php
-require_once('../includes/auth.php');
-include('../includes/connect.php');
+include_once '../includes/auth.php';
+include_once '../includes/connect.php';
 $filepath = "images/" . $_FILES["Photo"]["name"];
 
 if(move_uploaded_file($_FILES['Photo']['tmp_name'], '../'.$filepath)){
