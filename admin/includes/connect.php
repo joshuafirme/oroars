@@ -11,13 +11,13 @@
         '::1'
     );
 
-    $production = false;
+    $production = 'false';
 
     if(!in_array($_SERVER['REMOTE_ADDR'], $whitelist)){
         // not valid
     }
     else {
-        $production = true;
+        $production = 'true';
     }
     echo "SERVER " . $production;
 /* End config */
