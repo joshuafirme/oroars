@@ -1,6 +1,4 @@
 <?php
-	//Start session
-	@ob_start();
 	session_start();
 
 	include_once 'connect.php';
