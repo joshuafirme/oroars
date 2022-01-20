@@ -10,7 +10,7 @@ error_reporting(E_ALL);
 
     $production = false;
 
-    if($_SERVER['REMOTE_ADDR'] == "136.158.34.32"){
+    if($_SERVER['REMOTE_ADDR'] == "137.184.153.241"){
         $production = true;
     }
 
