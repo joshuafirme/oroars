@@ -8,9 +8,9 @@ $production = true;
 /* End config */
 
 if($production){
-    $db_host		= '104.248.149.73';
+    $db_host		= '137.184.153.241';
     $db_user		= 'root';
-    $db_pass		= 'uFh,cby{+ZP<w4fw';
+    $db_pass		= 'J6maSscQWMxS8r7K';
     $db_database	= 'oroars';
 }
 
