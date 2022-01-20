@@ -5,18 +5,9 @@
     $db_pass		= '';
     $db_database	= 'oroars';
 
-
-    $whitelist = array(
-        '137.184.153.241',
-        '::1'
-    );
-
     $production = false;
 
-    if(!in_array($_SERVER['REMOTE_ADDR'], $whitelist)){
-        // not valid
-    }
-    else {
+    if($_SERVER['REMOTE_ADDR'] == "136.158.34.32"){
         $production = true;
     }
 
