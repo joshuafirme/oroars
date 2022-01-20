@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <?php
+// required headers
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
+header('Expires: 0');
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: access");
+header("Access-Control-Allow-Methods: GET");
+header("Access-Control-Allow-Credentials: true");
 include_once 'includes/connect.php';
 include_once 'includes/auth.php';
 ?>
