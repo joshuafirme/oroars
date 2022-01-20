@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('../../admin/includes/connect.php');
 
  function function_alert($message) {
