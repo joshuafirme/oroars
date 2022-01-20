@@ -5,21 +5,12 @@
     $db_pass		= '';
     $db_database	= 'oroars';
 
+    $production = false;
 
-    $whitelist = array(
-        '137.184.153.241',
-        '::1'
-    );
-
-    $production = 'false';
-
-    if(!in_array($_SERVER['REMOTE_ADDR'], $whitelist)){
-        // not valid
+    if($_SERVER['REMOTE_ADDR'] == "136.158.34.32"){
+        $production = true;
     }
-    else {
-        $production = 'true';
-    }
-    echo "SERVER " . $_SERVER['REMOTE_ADDR'];
+
 /* End config */
 
 if($production){
