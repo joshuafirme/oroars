@@ -5,7 +5,7 @@ include_once 'includes/connect.php';
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>OROARS | Dashboard</title>
+  <title>OROARS | Voucher</title>
   <?php include_once 'includes/head.php';?>
   <style>
 	  .form-select{
@@ -162,7 +162,7 @@ include_once 'includes/connect.php';
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Delivery Fee</a></li>
+              <li class="breadcrumb-item"><a href="#">Voucher</a></li>
             </ol>
           </div>
         </div>
@@ -171,7 +171,156 @@ include_once 'includes/connect.php';
 
     <!-- Main content -->
     <section class="content">
-        <?php include_once 'includes/tables/delivery.php';?>
+       <!-- Default box -->
+<div class="card">
+  <div class="card-header">
+    <h3 class="card-title">Voucher Fee List</h3>
+  </div>
+    <div class="px-4 py-2">
+      <label class="btn btn-primary" style="text-align:center" for="modal1" id="btnAddNew"><i class="fa fa-plus"></i> Add New Entry</label>
+    </div>
+  <div class="card-body">
+    <table id="example1" class="table table-bordered table-striped">
+                  <thead>
+                  <tr>
+                    <th>Voucher code</th>
+                    <th>Discount</th>
+					<th>Status</th>
+					<th>Action</th>
+                  </tr>
+                  </thead>
+                  <tbody id="table_list">
+                               
+                  </tbody>
+
+                </table>
+  </div>
+  <div id="css-only-modals"><input class="css-only-modal-check" id="modal1" type="checkbox" />
+			<div class="css-only-modal">
+			<label class="css-only-modal-btn btn btn-danger btn-lg" for="modal1" style="padding:5px 10px;float:right">X</label>
+			<h2>Fill up details to add new voucher fee</h2>
+        <form style="text-align:left;margin-top:2em">
+            <div class="mb-3">
+                <label for="voucher_code" class="form-label">Voucher code</label>
+                <input type="text" class="form-control" id="voucher_code" autocomplete="off">
+            </div>
+            <div class="mb-3">
+                <label for="discount" class="form-label">Discount</label>
+                <input type="text" class="form-control" id="discount">
+            </div>
+			<div class="mb-3">
+                <label for="status" class="form-label">Status</label>
+                <select name="" class="form-control" id="status">
+					<option value="1">Active</option>
+					<option value="0">Inactive</option>
+				</select>
+            </div>
+        
+            <button type="submit" id="btnNewSubmit" class="btn btn-primary">Submit</button>
+        </form>
+				<label class="css-only-modal-btn btn btn-primary btn-lg" id="btnEscape" for="modal1" style="display:none;" style="padding:5px 10px;float:right">OK</label>
+			</div>
+			<div id="screen-shade"> </div>
+			</div>
+  <div class="card-footer">
+  </div>
+  <script type="text/javascript">
+
+  const fetchList = () =>{
+      fetch('includes/app/voucher.php?request=list')
+    .then(data => data.json())
+    .then(data => {
+      if(data.response == 1){
+          const container = document.querySelector("#table_list");
+          container.innerHTML = "";
+          if(data.hasOwnProperty("list")){
+          const requestcontent = data.list.map(item =>{
+              return `<tr>
+                          <td>${item.voucher_code}</td>
+                          <td>${parseFloat(item.discount).toFixed(2)}</td>
+						  <td>${item.status == 1 ? "ACTIVE" : "INACTIVE"}</td>
+                          <td><button class="btn btn-secondary" onclick="editRow(${item.id},'${item.voucher_code}',${item.discount},${item.status})"> EDIT</button></td>
+                      </tr>`
+          })
+
+          requestcontent.forEach(el=>{
+              container.innerHTML += el
+          })
+          }
+          if(!data.hasOwnProperty("list")){
+            container.innerHTML = `<tr><td colspan="5" style="text-align:center">No result found</td></tr>`
+          }
+      }
+    })
+    }
+
+    const selector = (name) =>{
+      return document.querySelector(name)
+    }
+
+    var $table_id = 0;
+    const editRow = (id,voucher_code,discount,status) =>{
+      var checkbox = document.querySelector("#modal1");
+      checkbox.checked = !checkbox.checked
+      selector("#voucher_code").value = voucher_code
+      selector("#discount").value = parseFloat(discount).toFixed(2),
+	  selector("#status").value = status
+      $table_id = id;
+    }
+
+  const saveTable = (formData) =>{
+      fetch('includes/app/voucher.php?request=save_voucher', {method: "POST",body:formData})
+        .then(data => data.json())
+        .then(data => {
+          if(data.response == 1){
+            if(data.hasOwnProperty("message")){
+              clearFields()
+              fetchList()
+              return alert(data.message)
+            }
+          }
+        })
+    }
+
+  const updateTable = (formData) => {
+    formData.append("id",$table_id)
+    fetch('includes/app/voucher.php?request=update_voucher', {method: "POST",body:formData})
+        .then(data => data.json())
+        .then(data => {
+          if(data.response == 1){
+            if(data.hasOwnProperty("message")){
+              clearFields()
+              fetchList()
+              $table_id = 0;
+              return alert(data.message)
+            }
+          }
+    })
+  }
+
+    const clearFields = () =>{
+      selector("#voucher_code").value = ""
+      selector("#discount").value = ""
+    }
+
+    fetchList()
+    
+    document.querySelector("#btnEscape").addEventListener("click",() => $table_id = 0)
+    document.querySelector("#btnNewSubmit").addEventListener("click",(event)=>{
+      var formData = new FormData()
+      formData.append("voucher_code",selector("#voucher_code").value)
+      formData.append("discount",selector("#discount").value)
+	  formData.append("status",selector("#status").value)
+      !$table_id ? saveTable(formData) : updateTable(formData);
+      event.preventDefault()
+    })
+
+   </script>
+
+
+</div>
+
+
     </section>
     <!-- /.content -->
   </div>
