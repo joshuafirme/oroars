@@ -1,0 +1,23 @@
+/*Sa About Us to*/
+/* Eto ay sa Categories section */
+.abrow{
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.abcol{
+    flex-basis: 31%;
+    background-color: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5% ;
+    padding: 10px 12px;
+    box-sizing: border-box;
+    transition: 5ps;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+}
+.abcol:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.329);
+}

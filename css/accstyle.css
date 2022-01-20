@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+  }
+
+/*section*/
+.nameacc{
+    width: 100%;
+    height: 60px;
+    background-color:#D4F1F4;
+    border-color: black 1px solid;
+}
+
+.acc-section{
+    display: block;
+    text-align: center;
+    padding: 100px 0 80px;
+    height: 50% fixed;
+    background-color: #D4F1F4;
+}
+.acc2-section{
+    display: block;
+    text-align: left;
+    padding: 10px 0 80px;
+    height: 70% ;
+    background-color: #D4F1F4;
+
+}
+.acc2-section .con .h1{
+    text-align: center;
+}
+
+.acc1-section{
+    display: block;
+    text-align: left;
+    padding: 100px 0 80px;
+    height: 80% ;
+    width: 100%;
+    background-color: rgb(158, 139, 115);
+}
+.accicon{
+    width: 50%;
+}
+
+.accicon a{
+    text-align: center;
+    font-size: 16px;
+    display: inline-block;
+
+}
+.accicon img{
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 20px;
+    display: inline-block;
+}
+.set img{
+    margin-left: 1050px;
+    display: inline-block;
+    float: inline-start;
+}
+
+.settingicon{
+    float:right;
+}
+.orders{
+    display:flex;
+    justify-content: flex-end;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/*section*/
+.status{
+    
+}
+
+.con{
+    padding-top: 5px;
+    align-items: center;
+    flex-direction: row;
+}
+.c1{
+    float:left;
+    width: 20%;
+    height: 60%;
+    margin-left: 210px;
+}
+
+.con2{
+    float: center;
+    width: 60%;
+    height:60%;
+    margin-left: 30%;
+}
+.con2 .cc{
+    float: left;
+    width: 35%;
+    height:60%;
+    margin-left: 70px;
+}
+.con2 .ccc{
+    float: right;
+    width: 30%;
+    height:60%;
+    margin-right: 10%;
+}
+.acc2-section a{
+font-size: 14px;
+}
+
+
+  .recentorder {
+    margin-top: 40px;
+    width: 800px;
+    height: 200px;
+    margin-left: 20%;
+    background: #FFFFFF;
+    box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    border-color: black;
+    padding-bottom: 2%;
+  }
+  
+  .titleheadrecentorder {
+    height: 60px;
+    border-bottom: 1px solid #000000;
+    text-align: center;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: justify;
+    border-color: teal;
+    display: flex;
+    float: inline-end;
+  }
+  .order{
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    text-align: center;
+  }
+  .placeon{
+    padding-left: 11%;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    text-align: center;
+  }
+  .items{
+    padding-left: 14%;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    text-align: center;
+  }
+  .total{
+    padding-left: 30%;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    text-align: center;
+  }  
+
+  

@@ -1,0 +1,52 @@
+
+
+/*section*/
+.nameacc{
+    width: 100%;
+    height: 60px;
+    background-color:#b38d8d63;
+    border-color: black 1px solid;
+}
+
+.acc-section{
+    display: block;
+    text-align: center;
+    padding: 100px 0 80px;
+    height: 100%;
+}
+.accicon{
+    width: 50%;
+}
+
+.accicon a{
+    text-align: center;
+    font-size: 16px;
+    display: inline-block;
+
+}
+.accicon img{
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 20px;
+    display: inline-block;
+}
+.set img{
+    margin-left: 1050px;
+    display: inline-block;
+    float: inline-start;
+}
+
+.settingicon{
+    float:right;
+}
+.orders{
+    margin-left: 68%;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/*section*/
+.status{
+    
+}

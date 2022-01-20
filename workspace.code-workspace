@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "..\\OnlineRestaurantOrderingandReservationSystem"
+		},
+		{
+			"path": "..\\..\\..\\..\\xampp\\htdocs\\ordering"
+		},
+		{
+			"path": "..\\..\\..\\..\\xampp\\htdocs\\FoodOrdering"
+		}
+	],
+	"settings": {}
+}

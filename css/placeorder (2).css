@@ -1,0 +1,507 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500);
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+.cart{
+  padding-top: 2%;
+  background-color:cadetblue;
+  width: 100%;
+  height: 110%;
+  padding-bottom: 2%;
+}
+
+.place-cart {
+  margin-top: 40px;
+  width: 700px fixed;
+  height: 490px fixed;
+  float: left;
+  margin-left: 30px;
+  background: #FFFFFF;
+  box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  border-color: black;
+  padding-bottom: 2%;
+}
+
+
+.sum {
+  margin-top: 40px;
+  width: 550px;
+  height: 300px ;
+  margin-right: 30px;
+  float: right;
+  box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  border-color: black;
+  background-color: white;
+
+}
+/*para sa nasa loob ng summary order*/
+
+.paymethod {
+  margin-top: 2%;
+  width: 550px;
+  height: 200px fixed;
+  margin-right: 30px;
+  float: right;
+  box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  border-color: black;
+  background-color: white;
+}
+.paymethod p{
+  margin-top: 2%;
+  font-size: 20px;
+  margin-left: 2%;
+}
+.paymethod a{
+  margin-left: 68%;
+  font-size: 16px;
+
+}
+.title {
+  height: 70px;
+  border-bottom: 1px solid #E1E8EE;
+  padding: 20px 30px;
+  color: #136de4;
+  font-size: 30px;
+  font-weight: 500;
+  text-align:justify;
+  border-color: teal;
+  text-align: center;
+}
+.titleheadcart {
+  height: 60px;
+  border-bottom: 1px solid #000000;
+  text-align: center;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: justify;
+  border-color: teal;
+  display: flex;
+  float: inline-end;
+}
+.checkboxtitle{
+  padding-left: 2%;
+  padding-top: 2%;
+  padding-bottom: 1%;
+  text-align: center;
+}
+.producttitlehead{
+  padding-left: 9%;
+  padding-top: 2%;
+  padding-bottom: 1%;
+  text-align: center;
+}
+.productdesctitlehead{
+  padding-left: 11%;
+  padding-top: 2%;
+  padding-bottom: 1%;
+  text-align: center;
+}
+.quantitytitlehead{
+  padding-left: 14%;
+  padding-top: 2%;
+  padding-bottom: 1%;
+  text-align: center;
+}
+
+.totalbil{
+  padding-left: 2%;
+}
+.totalpricetitlehead{
+  padding-left: 12%;
+  padding-top: 2%;
+  padding-bottom: 1%;
+  text-align: center;
+}
+
+/*Table head kasunod are ng cart na title*/
+.item {
+  padding: 20px 30px;
+  height: 120px;
+  display: flex;
+  border-color: black;
+}
+
+.item:nth-child(3) {
+  border-top:  1px solid #000000;
+  border-bottom:  1px solid #000000;
+}
+
+/* sa checkout button*/
+.remove_checkout{
+  margin-left: 600px;
+  margin-top: 20px;
+  padding-top: 2%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+/*Remove button*/
+.removebutton{
+  padding: 1%;
+  border: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  position: relative;
+  padding-top: 30px;
+}
+
+.removebutton-primary{
+
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  color:black;
+  border: 2px solid white;
+  padding: 5px 5px;
+  font-size: 14px;
+  background:transparent;
+  position: relative;
+  cursor: pointer;
+}
+
+.removebutton-primary:hover{
+  border: 1px solif #12bcda;
+  background:rgb(141, 238, 255);
+  transition: 1s;
+}
+/*Checkoutbutton*/
+.checkoutbutton{
+  padding: 1%;
+  border: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  position: relative;
+  padding-top: 30px;
+}
+
+.checkoutbutton-primary{
+
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  color:black;
+  border: 2px solid white;
+  padding: 5px 5px;
+  font-size: 14px;
+  background:transparent;
+  position: relative;
+  cursor: pointer;
+}
+
+.checkoutbutton-primary:hover{
+  border: 1px solif #12bcda;
+  background:rgb(141, 238, 255);
+  transition: 1s;
+}
+
+
+/*Checkoutbutton sa placeorder na page*/
+
+.p_button{
+  margin-top: 1%;
+float: left;
+margin-left: 90%;
+}
+.pbutton{
+  padding: 1%;
+  border: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  position: relative;
+  padding-top: 30px;
+}
+
+.pbutton-primary{
+
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  color:black;
+  border: 2px solid white;
+  padding: 5px 5px;
+  font-size: 14px;
+  background:transparent;
+  position: relative;
+  cursor: pointer;
+}
+
+.pbutton-primary:hover{
+  border: 1px solif #12bcda;
+  background:rgb(141, 238, 255);
+  transition: 1s;
+}
+/*para sa nasa loob ng summary*/
+.sumtitlehead{
+  text-align: center;
+}
+
+.subtotaltitlehead{
+  font-size: 18px;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+.shippingtitlehead{
+  font-size: 18px;
+  margin-top: 12px;
+  margin-left: 30px;
+}
+.totalbill{
+  font-size: 18px;
+  margin-top: 12px;
+  margin-left: 30px;
+}
+.voucher{
+  margin-left: 30px;
+}
+.voucher input[type=text] {
+  width: 75%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  border-radius: 10px;
+  height: 20px;
+  font-size: 18px;
+}
+.voucher button{
+  margin-right: 2%;
+  padding-bottom: 2%;
+}
+
+.icon-container {
+  margin-bottom: 5px;
+  padding: 7px 0;
+  font-size: 24px;
+  float: right;
+  margin-left: 65%;
+}
+
+
+/*para sa apply button ng voucher*/
+.applycode{
+  padding: 1%;
+  border: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  position: relative;
+  padding-top: 30px;
+}
+
+.applycode-primary{
+
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  color:black;
+  border: 2px solid white;
+  padding: 5px 5px;
+  font-size: 14px;
+  background:transparent;
+  position: relative;
+  cursor: pointer;
+}
+
+/*payment*/
+.cod{
+  padding: 1%;
+  border: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  position: relative;
+  text-align: center;
+}
+
+.cod-primary{
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  color:black;
+  border: 2px solid white;
+  padding: 5px 5px;
+  font-size: 15px;
+  background:transparent;
+  position: relative;
+  cursor: pointer;
+}
+
+.gcash{
+  padding: 1%;
+  border: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  position: relative;
+  padding-top: 30px;
+}
+
+.gcash-primary{
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  color:black;
+  border: 2px solid white;
+  padding: 5px 5px;
+  font-size: 15px;
+  background:transparent;
+  position: relative;
+  cursor: pointer;
+}
+
+
+
+.pm_btn{
+  float: right;
+  margin-left: 60%;
+}
+
+
+.ccv-primary{
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  color:black;
+  border: 2px solid white;
+  padding: 5px 5px;
+  font-size: 15px;
+  background:transparent;
+  position: relative;
+  cursor: pointer;
+}
+/* Buttons -  Delete and Like */
+.buttons {
+  position: relative;
+  padding-top: 30px;
+  margin-right: 60px;
+}
+
+
+.is-active {
+  animation-name: animate;
+  animation-duration: .8s;
+  animation-iteration-count: 1;
+  animation-timing-function: steps(28);
+  animation-fill-mode: forwards;
+}
+
+@keyframes animate {
+  0%   { background-position: left;  }
+  50%  { background-position: right; }
+  100% { background-position: right; }
+}
+
+/* Product Image */
+.image {
+  margin-right: 50px;
+}
+
+/* Product Description */
+.description {
+  padding-top: 10px;
+  margin-right: 60px;
+  width: 115px;
+}
+
+.description span {
+  display: block;
+  font-size: 14px;
+  color: #43484D;
+  font-weight: 400;
+}
+
+.description span:first-child {
+  margin-bottom: 5px;
+}
+.description span:last-child {
+  font-weight: 300;
+  margin-top: 8px;
+  color: #86939E;
+}
+
+/* Product Quantity */
+.quantity {
+  padding-top: 20px;
+  margin-right: 60px;
+}
+.quantity input {
+  -webkit-appearance: none;
+  border: none;
+  text-align: center;
+  width: 32px;
+  font-size: 16px;
+  color: #43484D;
+  font-weight: 300;
+}
+
+button[class*=btn] {
+  width: 30px;
+  height: 30px;
+  background-color: #E1E8EE;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+.minus-btn img {
+  margin-bottom: 3px;
+}
+.plus-btn img {
+  margin-top: 2px;
+}
+button:focus,
+input:focus {
+  outline:0;
+}
+
+/* Total Price */
+.total-price {
+  width: 83px;
+  padding-top: 27px;
+  text-align: center;
+  font-size: 16px;
+  color: #43484D;
+  font-weight: 300;
+  padding-left: 2%;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .shopping-cart {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  .item {
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .image img {
+    width: 50%;
+  }
+  .image,
+  .quantity,
+  .description {
+    width: 100%;
+    text-align: center;
+    margin: 6px 0;
+  }
+  .buttons {
+    margin-right: 20px;
+  }
+}

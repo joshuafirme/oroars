@@ -1,0 +1,57 @@
+.acc-section{
+    display: block;
+    text-align: left;
+    padding: 100px 0 80px;
+    height: 70% ;
+    background-color: #D4F1F4;
+}
+.addressbook {
+    margin-top: 40px;
+    width: 1000px;
+    height: 200px;
+    margin-left: 15%;
+    background: #FFFFFF;
+    box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    border-color: black;
+    padding-bottom: 2%;
+  }
+  
+  .titleheadaddressbook {
+    height: 60px;
+    border-bottom: 1px solid #000000;
+    text-align: center;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: justify;
+    border-color: teal;
+    display: flex;
+    float: inline-end;
+  }
+  .fullname{
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    text-align: center;
+  }
+  .address{
+    padding-left: 11%;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    text-align: center;
+  }
+  .postcode{
+    padding-left: 14%;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    text-align: center;
+  }
+  .mobilenum{
+    padding-left: 10%;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    text-align: center;
+  }  

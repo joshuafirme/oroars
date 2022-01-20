@@ -1,0 +1,212 @@
+.body{
+letter-spacing: 1px;
+}
+
+.productdesc{
+    background: rgba(53, 153, 83, 0.603);
+  /*  background-size: 100%;   */
+    background-position: center center;
+    padding: 70px 0 70px;
+    display: block;
+    position: relative;
+    height: 900px;
+    padding-bottom: 20px;
+}
+.res-section:before{
+    content: "";
+    width: 100%;
+    height: 100%; 
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.reservationcontainer{
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+.container-time
+{ 
+    padding: 50px;
+    outline: 3px dashed rgb(0, 45, 141);
+    outline-offset: -30px;
+    border-radius: 10px;
+    float: center;
+}
+
+.heading{
+    font-weight: 40px;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-left: 20px;
+}
+dd{
+    margin: auto;
+}
+
+.headingdays{
+    color: rgb(0, 45, 141);
+    font-size: 16px;
+    text-align: left;
+    margin-left: 30px;
+}
+
+textarea{
+    text-align: left;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    width: 50%;
+    margin-top: 10px;
+
+}
+input[type=text] {
+    text-align: left;
+    width: 40%;
+    margin-bottom: 12px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+.headingdays label{
+    float: left;
+    text-align: right
+}
+.headingdays p{
+    font-size: 16px;
+    text-align: justify;
+}
+
+.headingphone{
+    font-size: 20px;
+}
+
+.container-form{
+    padding: 20px 0;
+    margin: 0 auto;
+    color: black;
+}
+
+
+.form{
+    display: grid;
+    grid-row-gap: 20px;
+}
+
+.form p{
+    font-weight: 600px;
+}
+
+.formfield{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+}
+.formfield p{
+    font-size: 16px;
+}
+.input select{
+    pad: 10px 15px;
+    margin-top: 2%;
+    font-size: 16px;
+    height: 18px;
+}
+.textarea{
+    width: 10px;
+}
+.buttons{
+    margin-left: 600px;
+    margin-top: 30px; /**nababago ang position ng button gaqa nare*/
+    padding-top: 2%;
+    text-align: center;
+    margin-bottom: 10px;
+    float: right;
+  }
+  /*Remove button*/
+  .editbtn{
+    padding: 1%;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    position: relative;
+    padding-top: 30px;
+  }
+  
+  .editbtn-primary{
+  
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color:black;
+    border: 2px solid white;
+    padding: 5px 5px;
+    font-size: 14px;
+    background:transparent;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .edit-primary:hover{
+    border: 1px solif #12bcda;
+    background:rgb(141, 238, 255);
+    transition: 1s;
+  }
+  .savebtn{
+    padding: 1%;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    position: relative;
+    padding-top: 30px;
+  }
+  
+  .savebtn-primary{
+  
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color:black;
+    border: 2px solid white;
+    padding: 5px 5px;
+    font-size: 14px;
+    background:transparent;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .save-primary:hover{
+    border: 1px solif #12bcda;
+    background:rgb(141, 238, 255);
+    transition: 1s;
+  }
+
+  .deletetbtn{
+    padding: 1%;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    position: relative;
+    padding-top: 30px;
+    border-radius: 20px;
+  }
+  
+  .deletebtn-primary{
+  
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color:black;
+    border: 2px solid white;
+    padding: 5px 5px;
+    font-size: 14px;
+    background:transparent;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .delete-primary:hover{
+    border: 1px solif #12bcda;
+    background:rgb(141, 238, 255);
+    transition: 1s;
+  }
+
