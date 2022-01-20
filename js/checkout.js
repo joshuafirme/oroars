@@ -158,9 +158,30 @@ const setMap = (coords) =>{
 $(document).ready(()=>{
     getList()
     
+    function applyVoucher (){
+        fetch(`app/client/voucher.php?voucher_code=${$('#voucher_code').val()}`)
+            .then(data => data.json())
+            .then(data =>{
+                if (data.discount) {
+                    alert(data.discount+' Voucher applied!')
+                    $("#voucher_discount").text(data.discount);
+                    let total = parseFloat($("#total_order_price").text());
+                    let discount = parseFloat($("#voucher_discount").text());
+                    total = total - discount;
+                    $("#total_order_price").text(total);
+                }
+                else {
+                    alert('Invalid voucher!')
+                }
+            })
+    }
 
     $('#btnLocation').click(()=>{
         initMap()
+    })
+
+    $('#btn-apply').click(()=>{
+        applyVoucher()
     })
 
     if(!getCookie("username")){
@@ -316,6 +337,7 @@ $(document).ready(()=>{
                 }
             })
         }else{
+        
         let raw =  {
             "data": {
                 "attributes" : {

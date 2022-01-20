@@ -130,9 +130,12 @@
                 
                 <div style="display:flex;justify-content:center;flex-direction:column;align-items:center"> 
                     <div style="width:100%;background-color:#b5ebed;text-align:center;">
+                        <h2>Voucher discount <span id="voucher_discount">0.00</span></h2>
                         <h2>Order Price : &#8369 <span id="total_order_price">0.00</span></h2>
                     </div>
                 </div>
+                
+                <div style="margin:10px auto;width:50%;display:flex;flex-direction:row;align-items:center"><input id="voucher_code" type="text" class="form-control" autocomplete="off" placeholder="Voucher code"/><button id="btn-apply" style="padding:5px 20px;">Apply</button></div>
                 <div style="display:flex;flex-direction:column;">
                     <!-- <small>GCASH is the only payment of method allowed</small> -->
                     <div style="border-top:1px solid teal"><h2 style="margin:10px auto;width:50%">Select Payment Method</h2></div>
