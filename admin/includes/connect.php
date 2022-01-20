@@ -8,15 +8,16 @@ error_reporting(E_ALL);
     $db_pass		= '';
     $db_database	= 'oroars';
 
-    $production = false;
+    $production = true;
+    $local_host = array('127.0.0.1', "::1");
 
-    if($_SERVER['REMOTE_ADDR'] == "137.184.153.241"){
-        $production = true;
+    if(in_array($_SERVER['REMOTE_ADDR'], $local_host)){
+        $production = false;
     }
 
 /* End config */
 
-if($production){
+if($production == true){
     $db_host		= '137.184.153.241';
     $db_user		= 'root';
     $db_pass		= 'J6maSscQWMxS8r7K';
