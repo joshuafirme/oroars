@@ -74,7 +74,7 @@
               </button>
             </div>
             <div class="modal-body">
-              <?php include_once 'includes/contents/form_product.php';?>
+              <?php include_once 'includes/Contents/form_product.php';?>
             </div>
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
@@ -97,7 +97,7 @@
               </button>
             </div>
             <div class="modal-body">
-              <?php include_once 'includes/contents/edit_product.php';?>
+              <?php include_once 'includes/Contents/edit_product.php';?>
             </div>
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
