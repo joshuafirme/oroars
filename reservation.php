@@ -627,8 +627,8 @@ include'includes/connect.php';
                                         amount : 15000,
                                         currency : "PHP",
                                         redirect : {
-                                            success : `http://localhost:81/oroars/reservation.php?payment=success&type=${request_type}&ref=${ref}`,
-                                            failed : `http://localhost:81/oroars/reservation.php?payment=failed`
+                                            success : `https://137.184.153.241/reservation.php?payment=success&type=${request_type}&ref=${ref}`,
+                                            failed : `https://137.184.153.241/reservation.php?payment=failed`
                                         }
                                     }
                                     
