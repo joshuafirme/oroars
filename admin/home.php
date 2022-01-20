@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
-include'includes/auth.php';
-include'includes/connect.php';
+//include'includes/auth.php';
+//include'includes/connect.php';
 ?>
 <html lang="en">
 <head>
@@ -70,6 +70,6 @@ include'includes/connect.php';
   </div>
   <!-- /.content-wrapper -->
 
- <?php include 'includes/footer.php'?>
+ <?php //include'includes/footer.php'?>
 </body>
 </html>
