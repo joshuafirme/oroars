@@ -1,8 +1,9 @@
-<!DOCTYPE html>
+
 <?php
 include_once 'includes/connect.php';
 include_once 'includes/auth.php';
 ?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <title>OROARS | Dashboard</title>
