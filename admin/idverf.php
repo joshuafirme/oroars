@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
-include_once 'includes/auth.php';
-include_once 'includes/connect.php';
+include'includes/auth.php';
+include'includes/connect.php';
 ?>
 <html lang="en">
 <head>

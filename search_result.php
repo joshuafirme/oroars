@@ -1,6 +1,6 @@
 <!doctype html>
 <?php
-include_once 'includes/connect.php';
+include'includes/connect.php';
 ?>
 <html class="no-js" lang="en">
     <head>
