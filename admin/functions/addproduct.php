@@ -1,6 +1,6 @@
 <?php
-require_once('../includes/auth.php');
-include('../includes/connect.php');
+include_once 'includes/auth.php';
+include_once 'includes/connect.php';
 $ProductName = $_POST['ProductName'];
 $CategoryID = $_POST['CategoryID'];
 $SubCategoryID = $_POST['SubCategoryID'];
