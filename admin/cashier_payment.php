@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <?php
-include 'includes/auth.php';
-include 'includes/connect.php';
+include_once 'includes/auth.php';
+include_once 'includes/connect.php';
 ?>
 <html lang="en">
 <head>
   <title>OROARS | Dashboard</title>
-  <?php include 'includes/head.php';?>
+  <?php include_once 'includes/head.php';?>
   <style>
       .form-select{
 	  display: block;
@@ -136,8 +136,8 @@ include 'includes/connect.php';
 <div class="wrapper">
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-   <?php include 'includes/leftnav.php';?>
-  <?php include 'includes/topnav.php';?>
+   <?php include_once 'includes/leftnav.php';?>
+  <?php include_once 'includes/topnav.php';?>
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
@@ -147,7 +147,7 @@ include 'includes/connect.php';
     </a>
 
     <!-- Sidebar -->
-  <?php include 'includes/sidebaruser.php' ?>
+  <?php include_once 'includes/sidebaruser.php' ?>
 
       <!-- SidebarSearch Form -->
       <div class="form-inline">
@@ -161,7 +161,7 @@ include 'includes/connect.php';
         </div>
       </div>
 
-      <?php include 'includes/sidemenu.php'?>
+      <?php include_once 'includes/sidemenu.php'?>
     </div>
     <!-- /.sidebar -->
   </aside>
@@ -268,7 +268,7 @@ include 'includes/connect.php';
         <iframe height="450" width="550" id="sample-inline-frame" name="sample-inline-frame"> </iframe>
     </div>
   <!-- /.content-wrapper -->
- <?php include 'includes/footer.php'?>
+ <?php include_once 'includes/footer.php'?>
  <script type="text/javascript">
      class Card{
             amount = 0;

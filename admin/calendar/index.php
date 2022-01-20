@@ -1,5 +1,5 @@
 <?php
-include 'Calendar.php';
+include_once 'Calendar.php';
 $calendar = new Calendar('2021-09-26');
 $calendar->add_event('Birthday', '2021-09-03', 1, 'green');
 $calendar->add_event('Doctors', '2021-09-04', 1, 'red');

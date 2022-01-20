@@ -104,7 +104,7 @@ CodeMirror.defineMode("puppet", function () {
       stream.match(/\s+{/);
       state.inDefinition = false;
     }
-    // Are we in an 'include ' statement?
+    // Are we in an 'include_once ' statement?
     if (state.inInclude) {
       // Match and return the included class
       stream.match(/(\s+)?\S+(\s+)?/);
@@ -133,7 +133,7 @@ CodeMirror.defineMode("puppet", function () {
       if (stream.match(/\s+\S+\s+{/, false)) {
         state.inDefinition = true;
       }
-      if (word == 'include ') {
+      if (word == 'include_once ') {
         state.inInclude = true;
       }
       // Returns their value as state in the prior define methods

@@ -1,5 +1,5 @@
 <?php 
-include 'includes/connect.php'
+include_once 'includes/connect.php'
 ?>
 <!doctype html>
 <html class="no-js" lang="en">

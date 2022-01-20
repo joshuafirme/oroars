@@ -44,7 +44,7 @@ CodeMirror.defineMode("eiffel", function() {
     'is',
     'inspect',
     'infix',
-    'include ',
+    'include_once ',
     'if',
     'frozen',
     'from',

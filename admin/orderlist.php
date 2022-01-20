@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <?php
-include 'includes/auth.php';
-include 'includes/connect.php';
+include_once 'includes/auth.php';
+include_once 'includes/connect.php';
 ?>
 <html lang="en">
 <head>
   <title>OROARS | Dashboard</title>
-  <?php include 'includes/head.php';?>
+  <?php include_once 'includes/head.php';?>
   
 </head>
 <body class="hold-transition sidebar-mini">
@@ -14,8 +14,8 @@ include 'includes/connect.php';
 <div class="wrapper">
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-   <?php include 'includes/leftnav.php';?>
-  <?php include 'includes/topnav.php';?>
+   <?php include_once 'includes/leftnav.php';?>
+  <?php include_once 'includes/topnav.php';?>
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
@@ -25,7 +25,7 @@ include 'includes/connect.php';
     </a>
 
     <!-- Sidebar -->
-  <?php include 'includes/sidebaruser.php' ?>
+  <?php include_once 'includes/sidebaruser.php' ?>
 
       <!-- SidebarSearch Form -->
       <div class="form-inline">
@@ -39,7 +39,7 @@ include 'includes/connect.php';
         </div>
       </div>
 
-      <?php include 'includes/sidemenu.php'?>
+      <?php include_once 'includes/sidemenu.php'?>
     </div>
     <!-- /.sidebar -->
   </aside>
@@ -64,12 +64,12 @@ include 'includes/connect.php';
 
     <!-- Main content -->
     <section class="content">
-      <?php include 'includes/tables/orders.php'?>
+      <?php include_once 'includes/tables/orders.php'?>
     </section>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
 
- <?php include 'includes/footer.php'?>
+ <?php include_once 'includes/footer.php'?>
 </body>
 </html>
