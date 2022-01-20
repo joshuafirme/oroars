@@ -10,7 +10,7 @@ $filepath = "app/upload/" . $_FILES["Photo"]["name"];
 
 if(move_uploaded_file($_FILES['Photo']['tmp_name'], '../../'.$filepath)){
 
-          echo 'Files has uploaded';
+       //   echo 'Files has uploaded';
 };
 
 // query
