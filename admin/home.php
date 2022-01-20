@@ -70,6 +70,6 @@ include'includes/connect.php';
   </div>
   <!-- /.content-wrapper -->
 
- <?php //include_once 'includes/footer.php'?>
+ <?php include'includes/footer.php'?>
 </body>
 </html>
