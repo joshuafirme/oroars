@@ -1,6 +1,5 @@
 <?php 
 	include_once 'connect.php';
-	session_start();
 
 
 	//Check whether the session variable SESS_MEMBER_ID is present or not
