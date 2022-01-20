@@ -1,5 +1,5 @@
 <?php
-include('../includes/connect.php');
+include('../../admin/includes/connect.php');
 
  function function_alert($message) {
 
