@@ -4,7 +4,22 @@
     $db_user		= 'root';
     $db_pass		= '';
     $db_database	= 'oroars';
-$production = true;
+
+
+    $whitelist = array(
+        '137.184.153.241',
+        '::1'
+    );
+
+    $production = false;
+
+    if(!in_array($_SERVER['REMOTE_ADDR'], $whitelist)){
+        // not valid
+    }
+    else {
+        $production = true;
+    }
+
 /* End config */
 
 if($production){
