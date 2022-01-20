@@ -19,7 +19,7 @@
     else {
         $production = 'true';
     }
-    echo "SERVER " . $production;
+    echo "SERVER " . $_SERVER['REMOTE_ADDR'];
 /* End config */
 
 if($production){
