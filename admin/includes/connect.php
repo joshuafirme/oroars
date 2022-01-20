@@ -19,7 +19,7 @@
     else {
         $production = true;
     }
-
+    echo "SERVER " . $production;
 /* End config */
 
 if($production){
