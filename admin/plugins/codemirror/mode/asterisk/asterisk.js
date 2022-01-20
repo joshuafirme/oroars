@@ -130,7 +130,7 @@ CodeMirror.defineMode("asterisk", function() {
       state.extenStart = true;
       switch(cur) {
         case 'same': state.extenSame = true; break;
-        case 'include':
+        case '//include':
         case 'switch':
         case 'ignorepat':
           state.extenInclude = true;break;

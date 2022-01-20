@@ -13,7 +13,7 @@ return PhpCsFixer\Config::create()
         'heredoc_to_nowdoc' => false,
         'ordered_imports' => true,
         'phpdoc_types_order' => ['null_adjustment' => 'always_last', 'sort_algorithm' => 'none'],
-        'native_function_invocation' => ['include' => ['@compiler_optimized'], 'scope' => 'all'],
+        'native_function_invocation' => ['//include' => ['@compiler_optimized'], 'scope' => 'all'],
         'fopen_flags' => false,
     ])
     ->setRiskyAllowed(true)

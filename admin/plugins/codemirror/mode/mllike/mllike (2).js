@@ -22,7 +22,7 @@ CodeMirror.defineMode('mllike', function(_config, parserConfig) {
     'functor': 'keyword',
     'if': 'keyword',
     'in': 'keyword',
-    'include': 'keyword',
+    '//include': 'keyword',
     'let': 'keyword',
     'of': 'keyword',
     'open': 'keyword',

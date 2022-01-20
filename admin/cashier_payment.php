@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <?php
-include'includes/auth.php';
-include'includes/connect.php';
+//include'includes/auth.php';
+//include'includes/connect.php';
 ?>
 <html lang="en">
 <head>
   <title>OROARS | Dashboard</title>
-  <?php include'includes/head.php';?>
+  <?php //include'includes/head.php';?>
   <style>
       .form-select{
 	  display: block;
@@ -147,7 +147,7 @@ include'includes/connect.php';
     </a>
 
     <!-- Sidebar -->
-  <?php include'includes/sidebaruser.php' ?>
+  <?php //include'includes/sidebaruser.php' ?>
 
       <!-- SidebarSearch Form -->
       <div class="form-inline">
@@ -268,7 +268,7 @@ include'includes/connect.php';
         <iframe height="450" width="550" id="sample-inline-frame" name="sample-inline-frame"> </iframe>
     </div>
   <!-- /.content-wrapper -->
- <?php include'includes/footer.php'?>
+ <?php //include'includes/footer.php'?>
  <script type="text/javascript">
      class Card{
             amount = 0;
