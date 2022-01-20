@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <?php
-//include'includes/auth.php';
-//include'includes/connect.php';
+include'includes/auth.php';
+include'includes/connect.php';
 ?>
 <html lang="en">
 <head>
   <title>OROARS | Dashboard</title>
-  <?php //include'includes/head.php';?>
+  <?php include'includes/head.php';?>
   <style>
 	  .form-select{
 	  display: block;
@@ -132,7 +132,7 @@
     </a>
 
     <!-- Sidebar -->
-  <?php //include'includes/sidebaruser.php' ?>
+  <?php include'includes/sidebaruser.php' ?>
 
       <!-- SidebarSearch Form -->
       <div class="form-inline">
@@ -171,13 +171,13 @@
 
     <!-- Main content -->
     <section class="content">
-        <?php //include'includes/tables/address.php';?>
+        <?php include'includes/tables/address.php';?>
     </section>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
 
- <?php //include'includes/footer.php'?>
+ <?php include'includes/footer.php'?>
  
 </body>
 </html>

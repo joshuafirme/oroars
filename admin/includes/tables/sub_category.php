@@ -74,7 +74,7 @@
               </button>
             </div>
             <div class="modal-body">
-              <?php //include'includes/contents/form_sub_category.php'?>
+              <?php include'includes/contents/form_sub_category.php'?>
             </div>
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
