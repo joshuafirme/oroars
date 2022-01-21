@@ -22,7 +22,8 @@
                   </thead>
                   <tbody>
                     <?php
-                    $datatable = "SELECT `product`.ID, `product`.ProductName, `category`.CategoryName, `subcategory`.SubCategoryName, `product`.ProductPrice, `product`.SRP, `product`.photo FROM `product` LEFT JOIN `category` ON `category`.ID = `product`.CategoryID LEFT JOIN `subcategory` ON `subcategory`.`ID` = `product`.`SubCategoryID`";
+                    $datatable = "SELECT `product`.ID, `product`.ProductName, `category`.CategoryName, `subcategory`.SubCategoryName, `product`.ProductPrice, `product`.SRP, `product`.photo FROM `product` LEFT JOIN `category` ON `category`.ID = `product`.CategoryID LEFT JOIN `subcategory` ON `subcategory`.`ID` = `product`.`SubCategoryID` 
+                                  WHERE product.status = 1";
                     $result = $db->prepare($datatable);
                     $result->execute();
                     for($i=0; $row = $result->fetch(); $i++){
@@ -37,7 +38,7 @@
                                   <td><img src ="<?php echo '../' . $row['photo'];?>" height="50px" width="50px"/></td>
                                   <td>
                                     <a class="btn btn-success id" href='edit_product.php?id=<?php echo $row['ID'];?>'>Edit</a>
-                                    <a href="functions/delproduct.php?id=<?php echo $row['ID'];?>" class="btn btn-danger">Delete</a>
+                                    <button data-toggle="modal" data-id="<?php echo $row['ID'];?>" data-target="#confirmation" class="btn btn-danger btn-archive">Archive</button>
                                   </td>
                                 </tr>
 
@@ -54,14 +55,30 @@
   <div class="card-footer">
     Footer
   </div>
-  <script>
-      // $('#id').click(function() {
-      // var id = $(this).data('id');
-
-      // $('.id2S').val(id);
-      // } );
-   </script>
   <!-- /.card-footer-->
+</div>
+
+<div class="modal fade" id="confirmation" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+          <div class="modal-content bg-primary">
+            <div class="modal-header">
+              <h4 class="modal-title">Archive confirmation</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Are you sure do you want to archive this product?</p>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-outline-light" id="btn-confirm-archive">Yes</button>
+            </form>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
 </div>
 
 <div class="modal fade" id="modal-primary" aria-hidden="true" style="display: none;">

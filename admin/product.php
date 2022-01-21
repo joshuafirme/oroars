@@ -71,5 +71,31 @@ include_once 'includes/connect.php';
 
  <?php include_once 'includes/footer.php'?>
  
+ <script>
+   
+   var id;
+      $('.btn-archive').click(function() {
+        id = $(this).attr('data-id');
+
+      });
+      $('#btn-confirm-archive').click(function() {
+        archive(id)
+      });
+
+
+      function archive(id) {
+        var formData = new FormData()
+        formData.append("id",id)
+        fetch('includes/app/archive.php?request=archive&id='+id, {method: "POST"})
+            .then(data => data.json())
+            .then(data => {
+              if(data.response == 1){
+                alert(data.message) 
+                  
+                location.reload();
+              }
+        })
+      }
+ </script>
 </body>
 </html>

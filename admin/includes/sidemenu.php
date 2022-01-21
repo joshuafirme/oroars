@@ -296,7 +296,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="archive.php" class="nav-link">
                   <i  class=" far fa fa-archive nav-icon" aria-hidden="true"></i>
                   <p>Archieve</p>
                 </a>
