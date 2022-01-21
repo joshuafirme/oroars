@@ -16,6 +16,18 @@ switch($req){
             "priv" => $_POST['privilege']
         ];
         $result->execute($data);
+
+        $sql_audit = "INSERT INTO audit_trail(user_id,module,action,date_time)VALUES(:user_id,:module,:action,:date_time)";
+        $query_audit = $db->prepare($sql_audit);
+            $data_audit = [
+            "user_id" => $_SESSION["username"],
+            "module" => "Employee",
+            "action" => "Add",
+            "date_time" => date('Y-m-d H:m:s'),
+            ];
+
+            $query_audit->execute($data_audit);
+
         if($result){
                 return print_r(json_encode(array("response" => 1, "message" => "Position Saved!", "timestamp" => $time)));
         }
@@ -51,6 +63,17 @@ switch($req){
               "position" => $_POST['position'],
               "priv" => $_POST['privilege']
             ];
+
+            $sql_audit = "INSERT INTO audit_trail(user_id,module,action,date_time)VALUES(:user_id,:module,:action,:date_time)";
+            $query_audit = $db->prepare($sql_audit);
+                $data_audit = [
+                "user_id" => $_SESSION["username"],
+                "module" => "Employee",
+                "action" => "Update position",
+                "date_time" => date('Y-m-d H:m:s'),
+                ];
+    
+                $query_audit->execute($data_audit);
             
             if($query->execute($data)){
               return print_r(json_encode(array("response" => 1, "message" => "Position Updated", "timestamp" => $time)));
@@ -84,6 +107,17 @@ switch($req){
                 "position" => $_POST['position'],
                 "stats" => 1
             ];
+
+            $sql_audit = "INSERT INTO audit_trail(user_id,module,action,date_time)VALUES(:user_id,:module,:action,:date_time)";
+            $query_audit = $db->prepare($sql_audit);
+                $data_audit = [
+                "user_id" => $_SESSION["username"],
+                "module" => "User",
+                "action" => "Update",
+                "date_time" => date('Y-m-d H:m:s'),
+                ];
+    
+                $query_audit->execute($data_audit);
             
             if($query->execute($data)){
               return print_r(json_encode(array("response" => 1, "message" => "User Updated", "timestamp" => $time)));
@@ -103,6 +137,18 @@ switch($req){
                     "stats" => 1
                 ];
                 $result->execute($data);
+
+                $sql_audit = "INSERT INTO audit_trail(user_id,module,action,date_time)VALUES(:user_id,:module,:action,:date_time)";
+                $query_audit = $db->prepare($sql_audit);
+                    $data_audit = [
+                    "user_id" => $_SESSION["username"],
+                    "module" => "User",
+                    "action" => "Add",
+                    "date_time" => date('Y-m-d H:m:s'),
+                    ];
+        
+                    $query_audit->execute($data_audit);
+                    
                 if($result){
                         return print_r(json_encode(array("response" => 1, "message" => "New User Saved!", "timestamp" => $time)));
                 }
@@ -123,6 +169,17 @@ switch($req){
                     "ref_path" => $path_backup,
                     "userid" => $_GET['userid']
                 ];
+                $sql_audit = "INSERT INTO audit_trail(user_id,module,action,date_time)VALUES(:user_id,:module,:action,:date_time)";
+                $query_audit = $db->prepare($sql_audit);
+                    $data_audit = [
+                    "user_id" => $_SESSION["username"],
+                    "module" => "Backup",
+                    "action" => "Backup database",
+                    "date_time" => date('Y-m-d H:m:s'),
+                    ];
+        
+                    $query_audit->execute($data_audit);
+
                 if($stmt->execute($data)){
                     return print_r(json_encode(array("response" => 1, "message" => "Backup Saved!", "timestamp" => $time)));;
                 }
