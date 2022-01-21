@@ -28,6 +28,19 @@ include('../../admin/includes/connect.php');
                 {
                     $row = $statement->fetch();
                      $_SESSION["username"] = $row['ID'];
+
+
+                    $sql_audit = "INSERT INTO audit_trail(user_id,module,action,date_time)VALUES(:user_id,:module,:action,:date_time)";
+                    $query_audit = $db->prepare($sql_audit);
+                    $data_audit = [
+                    "user_id" => $_SESSION["username"],
+                    "module" => "Login",
+                    "action" => "Success Login",
+                    "date_time" => date('Y-m-d H:m:s'),
+                    ];
+
+                    $query_audit->execute($data_audit);
+                    
                      function_alert("Access Granted!");
                      function_alert("Welcome to OROARS System, Enjoy your day!");
                      echo '<script type="text/javascript">location.href = "../home.php";</script>';
