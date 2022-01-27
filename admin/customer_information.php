@@ -177,7 +177,7 @@ include_once 'includes/connect.php';
     <h3 class="card-title">List of customers</h3>
   </div>
   <div class="row">
-          <div class="px-4 py-2">
+          <div class="px-4 py-2 col-8">
               <div class="input-group col-12">
               <div class="input-group-prepend">
               <span class="input-group-text" id="">Select Dates</span>
@@ -192,7 +192,7 @@ include_once 'includes/connect.php';
             </select>
             <div class="input-group-append">
               <button class="btn btn-dark" style="text-align:center;margin-bottom:0" id="btn_generate"> generate report</button>
-            </div>
+            </div> <button type="button" class="btn btn-success  ml-2" id="btn_print"> <i class="fa fa-print"></i> Print</button>
           </div>
     </div>
   </div>
@@ -232,6 +232,15 @@ include_once 'includes/connect.php';
   <!-- /.content-wrapper -->
  <?php include_once 'includes/footer.php'?>
  <script>
+         $("#btn_print").click(()=>{
+          if($("#date_start").val() === "" || $("#date_end").val() === ""){
+       return alert("Please select Dates");
+     }
+     if($("#filter_report").val() === ""){
+       return alert("Please select filter");
+     }
+        window.open(`includes/app/print_customer_report.php?date_start=${$("#date_start").val()}&date_end=${$("#date_end").val()}&validated=${$("#filter_report").val()}`, '_blank');
+      });
    $("#btn_generate").click(()=>{
      if($("#date_start").val() === "" || $("#date_end").val() === ""){
        return alert("Please select Dates");

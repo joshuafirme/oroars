@@ -177,7 +177,7 @@ include_once 'includes/connect.php';
     <h3 class="card-title">List of Transactions</h3>
   </div>
   <div class="row">
-          <div class="px-4 py-2">
+          <div class="px-4 py-2 col-6">
               <div class="input-group col-12">
               <div class="input-group-prepend">
               <span class="input-group-text" id="">Select Dates</span>
@@ -187,8 +187,10 @@ include_once 'includes/connect.php';
             <div class="input-group-append">
               <button class="btn btn-dark" style="text-align:center;margin-bottom:0" id="btn_generate"> generate report</button>
             </div>
+      <button type="button" class="btn btn-success  ml-2" id="btn_print"> <i class="fa fa-print"></i> Print</button>
           </div>
     </div>
+            <h4 class="mt-3">Total Sales: ₱ <span id="total_sales">0</span></h4>
   </div>
   <div class="card-body">
     <table id="example1" class="table table-bordered table-striped">
@@ -224,6 +226,12 @@ include_once 'includes/connect.php';
   <!-- /.content-wrapper -->
  <?php include_once 'includes/footer.php'?>
  <script>
+      $("#btn_print").click(()=>{
+        if($("#date_start").val() === "" || $("#date_end").val() === ""){
+          return alert("Please select Dates");
+        }
+        window.open(`includes/app/print_sales_report.php?date_start=${$("#date_start").val()}&date_end=${$("#date_end").val()}`, '_blank');
+      });
    $("#btn_generate").click(()=>{
      if($("#date_start").val() === "" || $("#date_end").val() === ""){
        return alert("Please select Dates");
@@ -235,9 +243,11 @@ include_once 'includes/connect.php';
       if(data.response == 1){
           
           container.innerHTML = "";
+          let total = 0;
           if(data.hasOwnProperty("list")){
               console.log(data)
           const requestcontent = data.list.map(item =>{
+            total = total + parseFloat(item.total_amount);
               return `<tr>
                           <td>${item.date_created}</td>
                           <td>${item.ref_number}</td>
@@ -249,6 +259,8 @@ include_once 'includes/connect.php';
                          
                            </tr>`
           })
+
+          $('#total_sales').text(parseFloat(total).toFixed(2))
 
           if(requestcontent.length < 1){
             return container.innerHTML = `<tr><td colspan='4' style="text-align:center">No Result Found</td></tr>`
