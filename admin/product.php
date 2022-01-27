@@ -96,6 +96,38 @@ include_once 'includes/connect.php';
               }
         })
       }
+      $('.btn-edit').click(function() {
+        let el = $(this);
+
+        $("#product_id").val(el.attr('data-id'));
+        $("#name").val(el.attr('data-name'));
+        $("#cat_id").val(el.attr('data-category-id'));
+        $("#price").val(el.attr('data-price'));
+        $("#srp").val(el.attr('data-srp'));
+     //   $("#photo").val(el.attr('data-photo'));
+      });
+
+      $('#btn-update').click(function() {
+
+        var formData = new FormData()
+        formData.append("ID",$("#product_id").val());
+        formData.append("ProductName",$("#name").val());
+        formData.append("CategoryID",$("#cat_id").val());
+        formData.append("SubCategoryID","1");
+        formData.append("ProductPrice",$("#price").val());
+        formData.append("SRP",$("#srp").val());
+      //  formData.append("photo", $('#photo').prop('files')[0], $('#photo').prop('files')[0].name);
+
+        fetch('includes/app/product.php?request=update_product', {method: "POST",body:formData})
+            .then(data => data.json())
+            .then(data => {
+              if(data.response == 1){
+                alert(data.message) 
+                  
+                location.reload();
+              }
+        })
+      });
  </script>
 </body>
 </html>
